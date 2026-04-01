@@ -1,0 +1,78 @@
+<?php
+
+function somar_todos($numeros)
+{
+    $soma = 0;
+    foreach ($numeros as $n) {
+        $soma += $n;
+        if ($n < 0){
+            $soma -= $n;
+        }
+    }
+    return $soma;
+}
+
+function par($numeros)
+{
+    $pares = 0;
+    foreach ($numeros as $num) {
+       if ($num % 2 == 0){
+        $pares++;
+        if ($num == 0){
+            $pares--;
+        }
+       } 
+    }
+    return $pares;
+}
+
+function impar($numeros)
+{
+    $impares = 0;
+    foreach ($numeros as $num) {
+       if ($num % 2 != 0){
+        $impares++;
+        if ($num < 0){
+            $impares--;
+        }
+       } 
+    }
+    return $impares;
+}
+
+function div5($numeros)
+{
+    $divs = 0;
+    foreach ($numeros as $num) {
+        if ($num % 5 == 0){
+            $divs++;
+            if ($num < 0){
+                $divs--;
+            }
+        }
+    }
+    return $divs;
+}
+
+function diferenca ($numeros)
+{
+    $maior = 0;
+    $menor = 0;
+    foreach ($numeros as $num){
+        
+    }
+}
+
+$numeros = array();
+do {
+    $n = readline("Informe o valor: ");
+    $numeros[] = $n;
+} while ($n > 0);
+print("A soma é ");
+print(somar_todos($numeros) . "\n");
+print("O número de pares é: ");
+print(par($numeros) . "\n");
+print("O número de impares é: ");
+print(impar($numeros) . "\n");
+print("Os divisores de 5 são: ");
+print(div5($numeros) . "\n");
